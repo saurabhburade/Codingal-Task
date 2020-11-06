@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/styles.css">
+
+        <title>Codingal Task</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <nav class="nav">
+                <div class=" nav-start flex space-between">
+                    <div class="logo">
+                        <img width="100" src="./assets/logowithtext.svg" alt="logo">
+                    </div>
+
+                    <div class="class-title">
+                        Trial Lesson [Grade 1-3]
+                    </div>
+                </div>
+                <div id="hamberger-button">
+
+                    <span class="berger "></span>
+                    <span class="berger"></span>
+                    <span class="berger "></span>
+
+                </div>
+                <div class=" nav-end flex space-between">
+                    <div class="mob-class-title">
+                        Trial Lesson [Grade 1-3]
+                    </div>
+                    <div id="countdown">
+                        34:40
+                    </div>
+                    <div class="end-btn" id="class-end">
+                        <button onclick="openModal()" class="btn">
+                            End Class
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="modal">
+            <div class="modal-container">
+                <div onclick="closeModal()" id="cross">
+                    X
+                </div>
+                <div class="content">
+                    <h3>Select a reason to end the class</h3>
+                    <div class="check-container">
+                        <div>
+                            <input type="radio" onclick="openSuboptions(false)" checked name="options"
+                                value="completed">
+                            <label for="options">Class Completed</label>
+                        </div>
+                        <div>
+                            <input type="radio" onclick="openSuboptions(true)" name="options" value="interrupt">
+                            <label for="options">Class interupted/aborted</label>
+                            <div class="suboptions">
+                                <div>
+                                    <input type="radio" onclick="openTextArea(false)" checked name="suboptions">
+                                    <label for="options">Student didn't show up for the class</label>
+                                </div>
+                                <div>
+                                    <input type="radio" onclick="openTextArea(false)" name="suboptions">
+                                    <label for="options">Student didn't show any interest</label>
+                                </div>
+                                <div>
+                                    <input type="radio" onclick="openTextArea(false)" name="suboptions">
+                                    <label for="options">Student got disconnected</label>
+                                </div>
+                                <div>
+                                    <input type="radio" onclick="openTextArea(false)" name="suboptions">
+                                    <label for="options">I got disconnected</label>
+                                </div>
+                                <div>
+                                    <input type="radio" onclick="openTextArea(true)" name="suboptions">
+                                    <label for="options">Other reason</label>
+                                </div>
+                                <textarea class="txt-area" cols="30" rows="10"></textarea>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn">End Class</button><button onclick="closeModal()"
+                        class="btn bg-white">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </body>
+    <script src="./js/script.js"></script>
+
+</html>
